@@ -1,0 +1,436 @@
+Odpowiedzi do zadań:
+
+Zadanie 1:
+Wt.java:6: error: variable bVal might not have been initialized
+
+Zadanie 2:
+1
+
+Zadanie 3:
+0
+
+Zadanie 4:
+0
+
+Zadanie 5:
+1
+
+Zadanie 6:
+5
+
+Zadanie 7:
+1
+
+Zadanie 8:
+20
+//10100 -> 20
+
+Zadanie 9.
+-3
+
+Zadanie 10.
+-2x
+
+Zadanie 11.
+11111111111111111111111111111101
+x
+
+Zadanie 12.
+11111111111111111111111111111110
+x
+
+Zadanie 13.
+1x
+
+Zadanie 14.
+error: cannot find symbol
+
+Zadanie 15.
+8
+
+Zadanie 16.
+-9
+
+Zadanie 17.
+bVal
+
+Zadanie 18.
+10
+
+Zadanie 19.
+1
+
+Zadanie 20.
+error: non-static method sum(int,int) cannot be referenced from a static context
+
+Zadanie 21.
+4
+
+Zadanie 22.
+20
+
+Zadanie 23.
+20
+
+Zadanie 24.
+P0
+P1
+11
+
+Zadanie 26.
+12
+
+Zdanie 27.
+21
+
+Zadanie 28.
+25
+// wiązanie prawe dla +=
+
+Zadanie 29.
+20
+
+Zadanie 30.
+true
+
+Zadanie 31.
+false
+
+Zadanie 32.
+import java.util.Scanner;
+
+public class Czw {
+ public static void main(String[] args) {
+  Scanner scanner = new Scanner(System.in);
+  String name = scanner.next();
+  System.out.println(name);
+ }
+}
+
+Zadanie 33.
+error: for-each not applicable to expression type
+
+Zadanie 34.
+error: array required, but String found
+
+Zadanie 35.
+Janusz
+J
+a
+n
+u
+s
+z
+
+Zadanie 36.
+import java.util.Scanner;
+
+public class Czw {
+ public static void main(String[] args) {
+   final short NUMOFITEMS = 5;
+   
+   Scanner scanner = new Scanner(System.in);
+
+   double sum = 0.0d;
+   for(int i=0; i<NUMOFITEMS; i++) {
+    sum += scanner.nextDouble();
+   } 
+   System.out.print(sum / (double)NUMOFITEMS);
+ }
+}
+
+Zadanie 37.
+import java.util.Scanner;
+public class Czw {
+ public static void main(String[] args) {
+  float floatValues[] = new float[3];
+  int lastIndex = 0;
+  
+  Scanner scanner = new Scanner(System.in);
+
+  float readedValue;
+  while( (readedValue = scanner.nextFloat()) != 0) {
+   if(lastIndex >= floatValues.length) {
+    float[] newArray = new float[floatValues.length * 2];
+    for(int i=0; i<floatValues.length; i++) {
+     newArray[i] = floatValues[i];
+    }
+    floatValues = newArray;
+   }
+   floatValues[lastIndex++] = readedValue;
+  }
+  
+  for(int i=0; i<lastIndex; i++) {
+   System.out.print(floatValues[i] + " ");
+  }
+ }
+}
+
+Zadanie 38.
+public class Czw {
+ public static void main(String[] args) {
+  final int SIZE = 10;
+  int[][] arr2D = new int[SIZE][SIZE];
+
+  for(int col=1; col<=SIZE; col++) {
+   for(int row=1; row<=SIZE; row++) {
+    arr2D[col-1][row-1] = col * row;
+   }
+  }
+
+  for(int col=1; col<=SIZE; col++) {
+   for(int row=1; row<=SIZE; row++) {
+    System.out.print(arr2D[col-1][row-1] + "\t");
+   }
+   System.out.println();
+  }
+ }
+}
+
+Zaddanie 39.
+3
+
+Zadanie 40.
+false
+
+Zadanie 41.
+public class Czw {
+ public static void main(String[] args) {
+  short[] arr = new short[30];
+
+  for(int i=0; i<arr.length; i++) {
+   arr[i] = (short)(Math.random()*25+5);
+   System.out.print(arr[i] + " ");
+  }
+
+  System.out.println();
+  Czw.selectionSort(arr);
+  Czw.showArray(arr);
+ } 
+
+ public static void selectionSort(short[] arr) {
+  for(int i=0; i<arr.length-1; i++) {
+   int minIndex = i;
+   for(int j=i+1; j<arr.length; j++) {
+    if(arr[j] < arr[minIndex])
+     minIndex = j;
+   }   
+   short temp = arr[i];
+   arr[i] = arr[minIndex];
+   arr[minIndex] = temp;
+  }
+ }
+ 
+ public static void showArray(short[] arr) {
+  for(short item : arr) {
+   System.out.print(item + " ");
+   }
+ }
+}
+
+Zadanie 42.
+error: variable a might not have been initialized
+
+Zadanie 43.
+error: incompatible types: possible lossy conversion from double to long
+
+Zadanie 44.
+10.0
+
+Zadanie 45.
+15
+
+Zadanie 46.
+15
+
+Zadanie 47.
+X
+
+Zadanie 48.
+error: non-static variable this cannot be referenced from a static context
+
+Zadanie 49.
+error: non-static variable lVal cannot be referenced from a static context
+
+Zadanie 50.
+X
+X
+
+Zadanie 51.
+error: non-static method fun() cannot be referenced from a static context
+
+Zadanie 52.
+<adres>
+// Czw@6f75e721
+
+Zadanie 53.
+<error>
+
+Zadanie 54.
+
+
+Zadanie 55.
+<adres>
+
+Zadanie 56.
+IN MAIN
+
+Zadanie 57.
+Error: Main method not found in class Main, please define the main method as:
+   public static void main(String[] args)
+
+Zadanie 58.
+public class Op1 {
+ int a;
+
+ public Op1(int a) {
+  this.a = a;
+ }
+
+ public boolean equals(Op1 obj) {
+  if(this == obj) 
+   return true;
+  
+  return this.a == obj.a;
+ }
+}
+
+Zadanie 59.
+-------FILE Op1.java-------
+public class Op1 {
+ int a;
+
+ public Op1(int a) {
+  this.a = a;
+ }
+
+ public boolean equals(Op1 obj) {
+  if(this == obj) 
+   return true;
+  
+  return this.a == obj.a;
+ }
+}
+
+-------FILE Op2.java-------
+public class Op2 extends Op1 {
+ int c;
+ 
+ public Op2(int a, int c) {
+  super(a);
+  this.c = c;
+ }
+
+ public boolean equals(Op2 obj) {
+  if(this == obj)
+   return true;
+
+  return ((this.c == obj.c) && (super.equals(obj)));
+ }
+}
+
+Zadanie 60.
+<adres>
+<adres>
+
+Zadanie 61.
+import java.util.Scanner;
+public class Main {
+ public static void main(String[] args) {
+  char[] arr = new char[10];
+
+  Scanner scanner = new Scanner(System.in);
+  
+  int i=10;
+  do {
+   i--;
+   arr[i] = scanner.next().charAt(0);
+  } while(i > 0);
+ }
+}
+
+Zadanie 62.
+import java.util.Scanner;
+public class Main {
+ public static void main(String[] args) {
+  char[] arr = new char[10];
+
+  try {
+   arr[10] = 'A';
+  } catch (ArrayIndexOutOfBoundsException e) {
+   System.out.println("Przekroczono zakres tablicy!");
+  }
+ }
+}
+
+Zadanie 63.
+Blad w funkcji main()!
+
+Zadanie 64.
+Before tempArr[15]
+java.lang.ArrayIndexOutOfBoundsException: Index 15 out of bounds for length 3
+        at Main.fun(Main.java:15)
+        at Main.main(Main.java:6)
+
+Zadanie 65.
+Before tempArr[15]
+java.lang.ArrayIndexOutOfBoundsException: Index 15 out of bounds for length 3
+        at Main.fun(Main.java:14)
+        at Main.main(Main.java:5)
+
+Zadanie 66.
+error: unreported exception Exception; must be caught or declared to be thrown
+// Wyrzucamy wyjątek Exception, który będzie obsługiwany przez klasę po nim dziedziczącą - sprzeczne
+
+Zadanie 67.
+error: unreported exception MyException; must be caught or declared to be thrown
+
+Zadanie 68.
+BLAD
+
+Zadanie 69.
+public class Main {
+ 
+ public static void main(String[] args) {
+  try {
+   fun();
+  } catch(MyException e) {
+   e.printStackTrace();
+  }
+ } 
+
+ public static void fun() throws MyException {
+  throw new MyException("Znaleziono blad!");
+ }
+
+}
+
+Zadanie 70.
+public class Stack {
+ final int CAPACITY = 3;
+ int[] stack;
+ int currentItems;
+
+ public Stack() {
+  stack = new int[CAPACITY];
+  currentItems = 0;
+ }
+
+ public void push(int value) throws Exception {
+  if(currentItems >= CAPACITY) {
+   throw new Exception("Stack is full.");
+  }
+  stack[currentItems++] = value; 
+ }
+
+ public String toString() {
+  String tmp = ""; 
+  for(int i=0; i<currentItems; i++)
+   tmp += (this.stack[i] + " ");
+  return tmp;
+ }
+
+ public int pop() {
+  return this.stack[--this.currentItems];
+ }
+}

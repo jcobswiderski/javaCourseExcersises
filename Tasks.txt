@@ -1,0 +1,790 @@
+Co wyświetli się w konsoli? <error> <address>
+
+Zadanie 1.
+public class Wt {
+ public static void main(String[] args) {
+  byte bVal;
+  System.out.println("bVal");
+  System.out.println(bVal); 
+ }
+}
+
+Zadanie 2.
+public class Wt {
+ public static void main(String[] args) {
+  byte bVal = 1;
+  System.out.println(bVal);
+ }
+}
+
+Zadanie 3.
+public class Wt {
+ public static void main(String[] args) {
+  byte bVal = 1;
+  System.out.println(bVal >> 1);
+ }
+}
+
+Zadanie 4.
+public class Wt {
+ public static void main(String[] args) {
+  byte bVal = 1;
+  System.out.println(bVal >>> 1);
+ }
+}
+
+Zadanie 5.
+public class Wt {
+ public static void main(String[] args) {
+  byte bVal = 0b1;
+  System.out.println(bVal);
+ }
+}
+
+Zadanie 6.
+public class Wt {
+ public static void main(String[] args) {
+  byte bVal = 0b101;
+  System.out.println(bVal);
+ }
+}
+
+Zadanie 7.
+public class Wt {
+ public static void main(String[] args) {
+  byte bVal = 0b101;
+  System.out.println(bVal >> 2);
+ }
+}
+
+Zadanie 8.
+public class Wt {
+ public static void main(String[] args) {
+  byte bVal = 0b101;
+  System.out.println(bVal << (2%4)); 
+ }
+}
+
+Zadanie 9. 
+public class Wt {
+ public static void main(String[] args) {
+  byte bVal = -0b011;
+  System.out.println(bVal);
+ }
+}
+
+Zadanie 10.
+public class Wt {
+ public static void main(String[] args) {
+  byte bVal = -0b011;
+  System.out.print(bVal >> 1);
+  System.out.println("x");
+ }
+}
+
+Zadanie 11.
+public class Wt {
+ public static void main(String[] args) {
+  byte bVal = -0b011;
+  System.out.println(Integer.toBinaryString(bVal));
+  System.out.println("x");
+ }
+}
+
+Zadanie 12.
+public class Wt {
+ public static void main(String[] args) {
+  byte bVal = -0b011;
+  System.out.println(Integer.toBinaryString(bVal >> 1));
+  System.out.print("x");
+ }
+}
+
+Zadanie 13.
+public class Wt {
+ public static void main(String[] args) {
+  byte bVal = -0b11101;
+  System.out.print(Integer.toBinaryString(bVal >>> 31));
+  System.out.print("x");
+ }
+}
+
+Zadanie 14.
+public class Wt {
+ public static void main(String[] args) {
+  bVal = 010;
+  System.out.print(bVal);
+ }
+}
+
+Zadanie 15.
+public class Wt {
+ public static void main(String[] args) {
+  byte bVal = 010;
+  System.out.print(bVal);
+ }
+}
+
+Zadanie 16.
+public class Wt {
+ public static void main(String[] args) {
+  byte bVal = -011;
+  System.out.print(bVal);
+ }
+}
+
+Zadanie 17.
+public class Wt {
+ public static void main(String[] args) {
+  byte bVal = 001;
+  System.out.print("bVal");
+ }
+}
+
+Zadanie 18.
+public class Wt {
+ public static void main(String[] args) {
+  byte bVal = 0xA;
+  System.out.print(bVal);
+ }
+}
+
+Zadanie 19.
+public class Wt {
+ public static void main(String[] args) {
+  byte bVal = 0xA >> (3%4);
+  System.out.print(bVal);
+ }
+}
+
+Zadanie 20.
+public class Wt {
+ public static void main(String[] args) {
+  int a = 1, b = 3;
+  System.out.print(sum(a, b));
+ }
+
+ public int sum(int a, int b) {
+  return a + b;
+ }	
+}
+
+Zadanie 21.
+public class Wt {
+ public static void main(String[] args) {
+  int a = 1, b = 3;
+  System.out.print(sum(a, b));
+ }
+
+ public static int sum(int a, int b) {
+  return a + b;
+ }	
+}
+
+Zadanie 22.
+public class Wt {
+ int a;
+ int b;
+
+ public Wt(int a, int b) {
+  this.a = a;
+  this.b = b;
+ }
+
+ public static void main(String[] args) {
+  Wt example = new Wt(5, 15);
+  System.out.print(example.sum());
+ }
+
+ public int sum() {
+  return this.a + this.b;
+ }	
+}
+
+Zadanie 23.
+public class Wt {
+ int a;
+ int b;
+
+ Wt(int a, int b) {
+  this.a = a;
+  this.b = b;
+ }
+
+ public static void main(String[] args) {
+  Wt example = new Wt(5, 15);
+  System.out.print(example.sum());
+ }
+
+ public int sum() {
+  return this.a + this.b;
+ }	
+}
+
+Zadanie 24.
+-------FILE Wt.java-------
+public class Wt {
+ protected int a;
+ protected int b;
+
+ public Wt(int a, int b) {
+  this.a = a;
+  this.b = b;
+  System.out.println("P0");
+ }
+
+ public static void main(String[] args) {
+  Temp example = new Temp(11, 22);
+  System.out.println(example.getA());
+ }
+
+ public int sum() {
+  return a + b;
+ }	
+}
+
+-------FILE Temp.java-------
+public class Temp extends Wt {
+ int a;
+ 
+ public Temp(int a, int b) {
+  super(a, b);
+  this.a = a;
+  System.out.println("P1");
+ }
+
+ public int getA() {
+  return this.a;
+ }
+}
+
+Zadanie 25.
+-------FILE Wt.java-------
+public class Wt {
+ protected int a;
+ protected int b;
+
+ public Wt(int a, int b) {
+  this.a = a;
+  this.b = b;
+  System.out.println("P0");
+ }
+
+ public static void main(String[] args) {
+  Temp example = new Temp(11, 22);
+  System.out.println(example.getA());
+ }
+
+ public int sum() {
+  return a + b;
+ }	
+}
+
+-------FILE Temp.java-------
+public class Temp extends Wt {
+ int a;
+ 
+ public Temp(int a, int b) {
+  super(a, b);
+  this.a = a;
+  System.out.println("P1");
+ }
+
+ public int getA() {
+  return this.a;
+ }
+}
+
+Zadanie 26.
+public class Czw {
+ public static void main(String[] args) {
+  System.out.println(0b0000_1100);
+ }
+}
+
+Zadanie 27.
+public class Czw {
+ public static void main(String[] args) {
+  System.out.println(10 * 7 / 10 * 3);
+ }
+}
+
+Zadanie 28.
+public class Czw {
+ public static void main(String[] args) {
+  int val = 10; 
+  int sub = 5;
+  System.out.println(val += sub += 10);
+ }
+}
+
+Zadanie 29.
+public class Czw {
+ public static void main(String[] args) {
+  int val = 10; 
+  int sub = 5;
+  System.out.println(val = sub = 20);
+ }
+}
+
+Zadanie 30.
+public class Czw {
+ public static void main(String[] args) {
+  String name1 = "Jan";
+  String name2 = "Jan";
+
+  System.out.println(name1 == name2);
+ }
+}
+
+Zadanie 31.
+public class Czw {
+ public static void main(String[] args) {
+  String name1 = "Robert";
+  String name2 = "Jan";
+
+  System.out.println(name1 == name2);
+ }
+}
+
+Zadanie 32. 
+Zaimplementuj prosty program, który pobiera imię użytkownika z konsoli i zapisuje go do zmiennej String przy użyciu klasy Scanner
+
+Zadanie 33.
+import java.util.Scanner;
+
+public class Czw {
+ public static void main(String[] args) {
+  Scanner scanner = new Scanner(System.in);
+  String name = scanner.next();
+  System.out.println(name);
+
+  for(String letter : name) {
+   System.out.println(letter);
+  }
+ }
+}
+
+Zadanie 34.
+import java.util.Scanner;
+
+public class Czw {
+ public static void main(String[] args) {
+  Scanner scanner = new Scanner(System.in);
+  String name = scanner.next();
+  System.out.println(name);
+
+  for(int i=0; i<name.length(); i++) {
+   System.out.println(name[i]);
+  }
+ }
+}
+
+Zadanie 35.
+import java.util.Scanner;
+
+public class Czw {
+ public static void main(String[] args) {
+  Scanner scanner = new Scanner(System.in);
+  String name = scanner.next();
+  System.out.println(name);
+
+  for(int i=0; i<name.length(); i++) {
+   System.out.println(name.charAt(i));
+  }
+ }
+}
+
+Zadanie 36.
+Napisz program, który policzy średnią dla 5 liczb zmiennoprzecinkowych wprowadzonych przez użytkownika za pomocą klasy Scanner. Zadbaj o to, aby ilość wprowadzanch liczb była przechowana w postaci stałej.
+
+Zadanie 37.
+Zaimplementuj program, który stworzy tablicę trzy elementową typu float, następnie stwórz pętlę, która będzie wczytywała wartości do tablicy (Scanner) do momentu gdy zostanie wprowadzona wartość 0. Twoim zadaniem jest uwzględnienie i rozwiązanie przypadku, w którym długość tablicy będzie krótsza niż ilość elementów, które zostaną do niej wprowadzone. Przyjmij, że po przekroczeniu maksymalnej liczby elementów wielkość tablicy zostanie podwojona. Na koniec wyświetl zawartość tablicy, którą zapełniłeś wartościami.
+
+Zadanie 38.
+Zadeklaruj tablicę dwuwymiarową o wielkości n*n, która będzie przechowywała wartości tabliczki mnożenia.
+
+Zadanie 39.
+public class Czw {
+ public static void main(String[] args) {
+  int[][] arr2D = {{1, 1, 1}, {2, 2, 2}, {3,3,3}};
+  System.out.print(arr2D[2][0]);
+ }
+}
+
+Zadanie 40.
+public class Czw {
+ public static void main(String[] args) {
+  int[][] arr2D = {{1, 2, 3}, {1, 2, 3}, {3, 3, 3}};
+  System.out.println(arr2D[0] == arr2D[1]);
+ }
+}
+
+Zadanie 41.
+Stwórz program, który wygeneruje tablicę 20 losowych cyfr od 5 do 30 a następnie stwórz funkcję która posortuje za pomocą algorytmu selection sort, w kolejności rosnącej wartości w tej tablicy.
+
+Zadanie 42.
+public class Czw {
+ public static void main(String[] args) {
+  String a;
+  System.out.println(a);
+ }
+}
+
+Zadanie 43.
+public class Czw {
+ public static void main(String[] args) {
+  Czw obj = new Czw();
+  obj.fun(10.0D);
+ }
+
+ public static void fun(long val) {
+  System.out.println(val);
+ }
+}
+
+Zadanie 44.
+public class Czw {
+ public static void main(String[] args) {
+  Czw obj = new Czw();
+  obj.fun(10L);
+ }
+
+ public static void fun(double val) {
+  System.out.println(val);
+ }
+}
+
+Zadanie 45.
+public class Czw {
+ long lVal;
+
+ public Czw() {
+  this.lVal = 15L;
+ } 
+
+ public static void main(String[] args) {
+  Czw obj = new Czw();
+  obj.fun();
+ }
+
+ public void fun() {
+  System.out.println(this.lVal);
+ }
+}
+
+Zadanie 46.
+public class Czw {
+ long lVal;
+
+ public Czw() {
+  this.lVal = 15L;
+ } 
+
+ public static void main(String[] args) {
+  Czw obj = new Czw();
+  obj.fun();
+ }
+
+ public void fun() {
+  System.out.println((double)this.lVal);
+ }
+}
+
+Zadanie 47.
+public class Czw {
+ long lVal;
+
+ public Czw() {
+  this.lVal = 15L;
+ } 
+
+ public static void main(String[] args) {
+  Czw obj = new Czw();
+  obj.fun();
+ }
+
+ public static void fun() {
+  System.out.println("X");
+ }
+}
+
+Zadanie 48.
+public class Czw {
+ long lVal;
+
+ public Czw() {
+  this.lVal = 15L;
+ } 
+
+ public static void main(String[] args) {
+  Czw obj = new Czw();
+  obj.fun();
+ }
+
+ public static void fun() {
+  System.out.println(this.lVal);
+ }
+}
+
+Zadanie 49.
+public class Czw {
+ long lVal;
+
+ public Czw() {
+  this.lVal = 15L;
+ } 
+
+ public static void main(String[] args) {
+  Czw obj = new Czw();
+  obj.fun();
+ }
+
+ public static void fun() {
+  System.out.println(lVal);
+ }
+}
+
+Zadanie 50.
+public class Czw {
+ long lVal;
+
+ public Czw() {
+  this.lVal = 15L;
+ } 
+
+ public static void main(String[] args) {
+  Czw obj = new Czw();
+  obj.fun();
+  Czw.fun();
+ }
+
+ public static void fun() {
+  System.out.println("X");
+ }
+}
+
+Zadanie 51.
+public class Czw {
+ long lVal;
+
+ public Czw() {
+  this.lVal = 15L;
+ } 
+
+ public static void main(String[] args) {
+  Czw obj = new Czw();
+  obj.fun();
+  Czw.fun();
+ }
+
+ public void fun() {
+  System.out.println("X");
+ }
+}
+
+Zadanie 52.
+-------FILE Pt.java-------
+public class Pt {
+ public static void main(String[] args) {
+  Czw day = new Czw(true);
+ }
+}
+-------FILE Czw.java-------
+public class Czw {
+ boolean weatherGood;
+ 
+ public Czw(boolean weatherGood) {
+  this.weatherGood = weatherGood;
+  System.out.println(this);
+ }
+}
+
+Zadanie 53.
+public class Czw extends Pt{
+ boolean weatherGood;
+ 
+ public Czw(boolean weatherGood) {
+  this.weatherGood = weatherGood;
+  System.out.println(this);
+  System.out.println(super);
+ }
+}
+
+Zadanie 54.
+public class Czw extends Pt{
+ boolean weatherGood;
+ 
+ public Czw(boolean weatherGood) {
+  this.weatherGood = weatherGood;
+  this.toString();
+ }
+}
+
+Zadanie 55.
+public class Czw extends Pt{
+ boolean weatherGood;
+ 
+ public Czw(boolean weatherGood) {
+  this.weatherGood = weatherGood;
+  System.out.print(this.toString());
+ }
+}
+
+Zadanie 56.
+public class Main {
+ public static void main(String[] args) {
+  System.out.println("IM MAIN"); 
+  
+  Op1 example1 = new Op1(10, "A"); // Op1(int a, String b) {...}
+  Op2 example2 = new Op2(10, "B"); // Op2(int c, String d) {...}
+ }
+}
+
+Zadanie 57.
+public class Main {
+ public static void main() {
+  System.out.println("IM MAIN"); 
+  
+  Op1 example1 = new Op1(10, "A"); // Op1(int a, String b) {...}
+  Op2 example2 = new Op2(10, "B"); // Op2(int c, String d) {...}
+ }
+}
+
+Zadanie 58.
+Zaimplementuj klasę, która będzie przechowywała jedno pole typu int oraz będzie posiadała metodę pozwalającą na porównywanie ze sobą dwóch instancji stworzonej klasy.
+
+Zadanie 59.
+Zaimplementuj klasę, która będzie przechowywała jedno pole typu int oraz będzie posiadała metodę pozwalającą na porównywanie ze sobą dwóch instancji stworzonej klasy. Następnie stwórz dodatkową klasę, która będzie dziedziczyła z klasy wcześniej stworzonej oraz dodatkowo będzie posiadała jedno pole. Następnie stwórz metodę equals, która będzie porównywała ze sobą dwa potomne instancje klasy pochodnej.
+
+Zadanie 60.
+public class Main {
+ public static void main(String[] args) {
+  System.out.println("IM MAIN"); 
+  
+  Op2 x = new Op2(10, 10);
+
+  System.out.println(x);
+  System.out.println(x.toString());
+ }
+}
+
+Zadanie 61.
+Napisz program, który wczyta 10 znaków z klawiatury za pomocą klasy Scanner oraz wczyta je do tablicy typu char.
+
+Zadanie 62.
+Stwórz program, który w momencie próby dostępu do indeksu tablicy, który nie istnieje wyprowadzi Exception z informacją "Przekroczono zakres tablicy!"
+
+Zadanie 63.
+import java.util.Scanner;
+public class Main {
+ 
+ public static void main(String[] args) {
+  try {
+   Main.fun();
+  } catch(Exception e) {
+   System.out.println("Blad w funkcji main()!");
+  }
+ } 
+
+ public static void fun() throws Exception {
+  throw new Exception();
+ }
+
+}
+
+Zadanie 64.
+public class Main {
+ 
+ public static void main(String[] args) {
+  try {
+   Main.fun();
+  } catch(ArrayIndexOutOfBoundsException x) {
+   x.printStackTrace();
+  }
+ } 
+
+ public static void fun() throws ArrayIndexOutOfBoundsException {
+  int[] tempArr = {0, 10, 20};
+  System.out.println("Before tempArr[15]");
+  System.out.println(tempArr[15]);
+  System.out.println("After tempArr[15]");
+ }
+
+}
+
+Zadanie 65.
+public class Main {
+ 
+ public static void main(String[] args) {
+  try {
+   Main.fun();
+  } catch(Exception x) {
+   x.printStackTrace();
+  }
+ } 
+
+ public static void fun() throws ArrayIndexOutOfBoundsException {
+  int[] tempArr = {0, 10, 20};
+  System.out.println("Before tempArr[15]");
+  System.out.println(tempArr[15]);
+  System.out.println("After tempArr[15]");
+ }
+
+}
+
+Zadanie 66.
+public class Main {
+ 
+ public static void main(String[] args) {
+  try {
+   Main.fun();
+  } catch(ArrayIndexOutOfBoundsException x) {
+   x.printStackTrace();
+  }
+ } 
+
+ public static void fun() throws Exception {
+  int[] tempArr = {0, 10, 20};
+  System.out.println("Before tempArr[15]");
+  System.out.println(tempArr[15]);
+  System.out.println("After tempArr[15]");
+ }
+
+}
+
+Zadanie 67.
+public class Main {
+ 
+ public static void main(String[] args) {
+  fun();
+ } 
+
+ public static void fun() throws MyException {
+  throw new MyException();
+ }
+
+}
+
+Zadanie 68.
+public class Main {
+ 
+ public static void main(String[] args) {
+  try {
+   fun();
+  } catch(MyException e) {
+   System.out.println("BLAD");
+  }
+ } 
+
+ public static void fun() throws MyException {
+  throw new MyException();
+ }
+
+}
+
+Zadanie 69.
+Zdefiniuj własny wyjątek MyException, uwzględnij w nim możliwość podawania tekstu błędu podczas jego tworzenia.
+
+Zadanie 70.
+Stwórz strukturę stosu.
